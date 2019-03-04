@@ -1,0 +1,44 @@
+﻿@model RentCar.Models.Cars
+@{
+    ViewBag.Title = "Create";
+}
+
+<form role="form" action="/Home/Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        @Html.LabelFor(p => p.Brend)
+        @Html.TextBoxFor(p => p.Brend, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Brend, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Model)
+        @Html.TextBoxFor(p => p.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Model, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Year)
+        @Html.TextBoxFor(p => p.Year, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Year, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Capacity)
+        @Html.TextBoxFor(p => p.Capacity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Capacity, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Horseshoe)
+        @Html.TextBoxFor(p => p.Horseshoe, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Horseshoe, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Fuel)
+        @Html.TextBoxFor(p => p.Fuel, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Fuel, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.March)
+        @Html.TextBoxFor(p => p.March, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.March, null, new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

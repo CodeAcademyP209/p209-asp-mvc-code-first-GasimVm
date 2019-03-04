@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container body-content ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+
+
+            <div class="collapse navbar-collapse  d-flex justify-content-between " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" >
+                    <li class="nav-item active mr-4">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="nav-item mr-4">
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+
+                    <li class="nav-item mr-4">
+                        @Html.ActionLink("Create", "Create", "Home")
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

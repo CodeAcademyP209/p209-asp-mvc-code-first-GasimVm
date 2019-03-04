@@ -1,0 +1,28 @@
+﻿@using RentCar.Models
+@model IEnumerable<RentCar.Models.Cars>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row" style="margin-top:20px">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/Images/@item.Image " alt="Card image cap" style="width:200px">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold" style="color:darkred">@item.Brend @item.Model </h5>
+                    <p class="card-text ">Yürüşü:@item.March</p>
+                    <p class="card-text">İli:@item.Year</p>
+                    <p class="card-text">At gücü:@item.Horseshoe</p>
+                    <p class="card-text">Yanacaq növü :@item.Fuel</p>
+                    <p class="card-text">Matorun həcmi:@item.Capacity</p>
+                   
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

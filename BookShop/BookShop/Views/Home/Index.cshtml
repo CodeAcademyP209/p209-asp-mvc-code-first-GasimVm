@@ -1,0 +1,26 @@
+﻿@using BookShop.Models
+@model IEnumerable<BookShop.Models.Book>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/Images/@item.Image" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold" style="color:darkred">@item.Name</h5>
+                    <p class="card-text " >@item.Author</p>
+                    <p class="card-text">@item.Description</p>
+                    <p class="card-text">@item.Price</p>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
